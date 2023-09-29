@@ -18,37 +18,61 @@
      <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
 
      <script>
-          var texts = "<?= $response['profile']['hsb'] ?>";
-          var texts = texts.split('|');
-
-          let currentTextIndex = 0;
-          let charIndex = 0;
-          const textElement = $("#title-type");
-
-          function type() {
-               const currentText = texts[currentTextIndex];
-               if (charIndex < currentText.length) {
-                    textElement.text(currentText.slice(0, charIndex + 1));
-                    charIndex++;
-                    setTimeout(type, 100); // Kecepatan pengetikan
-               } else {
-                    setTimeout(erase, 1000); // Tunggu 1 detik sebelum menghapus
+          // typing animation
+          var texts = "<?= isset($response['profile']['hsb']) ? $response['profile']['hsb'] : 'undefined'; ?>";
+          if (texts !== 'undefined') {
+               var texts = texts.split('|');
+     
+               let currentTextIndex = 0;
+               let charIndex = 0;
+               const textElement = $("#title-type");
+     
+               function type() {
+                    const currentText = texts[currentTextIndex];
+                    if (charIndex < currentText.length) {
+                         textElement.text(currentText.slice(0, charIndex + 1));
+                         charIndex++;
+                         setTimeout(type, 100); // Kecepatan pengetikan
+                    } else {
+                         setTimeout(erase, 1000); // Tunggu 1 detik sebelum menghapus
+                    }
                }
-          }
-
-          function erase() {
-               const currentText = texts[currentTextIndex];
-               if (charIndex >= 0) {
-                    textElement.text(currentText.slice(0, charIndex));
-                    charIndex--;
-                    setTimeout(erase, 50); // Kecepatan penghapusan
-               } else {
-                    currentTextIndex = (currentTextIndex + 1) % texts.length;
-                    setTimeout(type, 500); // Tunggu 0.5 detik sebelum mengetik teks berikutnya
+     
+               function erase() {
+                    const currentText = texts[currentTextIndex];
+                    if (charIndex >= 0) {
+                         textElement.text(currentText.slice(0, charIndex));
+                         charIndex--;
+                         setTimeout(erase, 50); // Kecepatan penghapusan
+                    } else {
+                         currentTextIndex = (currentTextIndex + 1) % texts.length;
+                         setTimeout(type, 500); // Tunggu 0.5 detik sebelum mengetik teks berikutnya
+                    }
                }
+     
+               type();
           }
+     </script>
 
-          type();
+     <script>
+          // button load more
+          $(document).ready(function(){
+               $(".port-item").slice(0, 3).show();
+               $(".port-btn-load").on("click", function(e){
+                    // e.preventDefault();
+                    $(".port-item:hidden").slice(0, 3).slideDown();
+                    if ($(".port-item:hidden").length == 0) {
+                         $(".port-btn-load").css('display', 'none');
+                         $(".port-btn-less").css('display', 'flex');
+                    }
+               });
+               $(".port-btn-less").on("click", function(e){
+                    // e.preventDefault();
+                    $(".port-item").slice(3).slideUp();
+                    $(".port-btn-less").css('display', 'none');
+                    $(".port-btn-load").css("display", "flex");
+               });
+          });
      </script>
 
 </body>

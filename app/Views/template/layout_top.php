@@ -152,13 +152,13 @@
             border-radius: 50%;
         }
 
-        #portfolio .btn-load {
+        #portfolio .port-btn-load, #portfolio .port-btn-less {
             margin: 0 auto;
             background-color: #F57C2A;
             color: #EFEFEF;
         }
 
-        #portfolio .btn-load:hover {
+        #portfolio .port-btn-load:hover, #portfolio .port-btn-less:hover {
             background-color: #C95C14;
         }
 

@@ -26,7 +26,7 @@
                     <div class="row mt-4">
                         <h4 class="ff-inter text-center text-white my-3">SKILL</h4>
                         <div class="col d-flex">
-                            <div class="row row-cols-auto justify-content-center">
+                            <div class="row row-cols-auto justify-content-center mx-auto">
                                 <?php for ($i = 0; $i < count(explode('|', $response['profile']['msk'])); $i++) { ?>
                                     <div class="col">
                                         <p class="ff-inter text-center text-white fs-5">
@@ -76,7 +76,7 @@
             </div>
             <div class="row">
                 <?php for ($k = 0; $k < count($response['portfolio']); $k++) { ?>
-                    <div class="col-lg-4 col-sm-6 my-3">
+                    <div class="col-lg-4 col-sm-6 my-3 port-item" style="display: none">
                         <!-- portfolio items -->
                         <div class="card">
                             <img src="assets/img/port-<?= $k + 1 ?>.png" class="card-img-top" alt="th-portfolio">
@@ -94,8 +94,9 @@
                         </div>
                     </div>
                 <?php } ?>
-                <div class="col-12 my-3 d-flex">
-                    <button type="button" class="btn btn-load ff-inter">LOAD MORE</button>
+                <div class="col-12 my-3 d-flex justify-content-center">
+                    <a class="btn port-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: flex;" type="button"><span class="text-white m-auto">LOAD MORE</span></a>
+                    <a class="btn port-btn-less text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: none;" type="button"><span class="text-white m-auto">SEE LESS</span></a>
                 </div>
             </div>
         </div>
