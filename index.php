@@ -30,7 +30,7 @@ if (strpos($pageTemp, 'proid') !== false) {
 // tentukan bagaimana halaman akan di-load
 if (empty($page)) {
 	// pemanggilan method yang akan di-run
-	$controllerHome->index();
+	$controllerHome->nulls();
 } else {
 	switch ($page) {
 		case 'proid':

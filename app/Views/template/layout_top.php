@@ -233,7 +233,21 @@
             box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.5);
         }
     </style>
-
+    <!-- page 404 -->
+    <style>
+        #page-404 {
+            height: 100vh;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #page-404 .d-block div:first-child {
+            font-size: 6rem;
+        }
+    </style>
+    
 </head>
 
 <body id="page-top">
