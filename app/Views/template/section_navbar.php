@@ -27,6 +27,10 @@
                         <?php if (strpos($this->page, 'proid') !== false) { echo '#portfolio'; }
                         else if (strpos($this->page, 'porid') !== false) { echo '?proid/' . substr(explode('/', $this->page)[1], 0, 11) . '#portfolio'; } ?>
                     ">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="
+                        <?php if (strpos($this->page, 'proid') !== false) { echo '#article'; }
+                        else if (strpos($this->page, 'porid') !== false) { echo '?proid/' . substr(explode('/', $this->page)[1], 0, 11) . '#article'; } ?>
+                    ">Article</a></li>
                 </ul>
             </div>
         </div>

@@ -55,7 +55,7 @@
      </script>
 
      <script>
-          // button load more
+          // button load more portfolio
           $(document).ready(function(){
                $(".port-item").slice(0, 3).show();
                $(".port-btn-load").on("click", function(e){
@@ -71,6 +71,25 @@
                     $(".port-item").slice(3).slideUp();
                     $(".port-btn-less").css('display', 'none');
                     $(".port-btn-load").css("display", "flex");
+               });
+          });
+
+          // button load more article
+          $(document).ready(function(){
+               $(".artcl-item").slice(0, 3).show();
+               $(".artcl-btn-load").on("click", function(e){
+                    // e.preventDefault();
+                    $(".artcl-item:hidden").slice(0, 3).slideDown();
+                    if ($(".artcl-item:hidden").length == 0) {
+                         $(".artcl-btn-load").css('display', 'none');
+                         $(".artcl-btn-less").css('display', 'flex');
+                    }
+               });
+               $(".artcl-btn-less").on("click", function(e){
+                    // e.preventDefault();
+                    $(".artcl-item").slice(3).slideUp();
+                    $(".artcl-btn-less").css('display', 'none');
+                    $(".artcl-btn-load").css("display", "flex");
                });
           });
      </script>

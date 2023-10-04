@@ -67,7 +67,7 @@
         </div>
     </section>
     <!-- Portfolio -->
-    <section class="page-section bg-light" id="portfolio">
+    <section class="page-section" id="portfolio">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading ff-inter text-uppercase">PORTFOLIO</h2>
@@ -97,6 +97,122 @@
                 <div class="col-12 my-3 d-flex justify-content-center">
                     <a class="btn port-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: flex;" type="button"><span class="text-white m-auto">LOAD MORE</span></a>
                     <a class="btn port-btn-less text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: none;" type="button"><span class="text-white m-auto">SEE LESS</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Article -->
+    <section class="page-section" id="article">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 1</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 2</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> coding</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 3</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 4</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 5</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> tips and trick</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                    <!-- article items -->
+                    <div class="card">
+                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
+                        <div class="card-body row">
+                            <div class="col col-9">
+                                <h4 class="card-title ff-inter text-capitalize">article 6</h4>
+                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
+                            </div>
+                            <div class="col col-3 d-flex">
+                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3 d-flex justify-content-center">
+                    <a class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: flex;" type="button"><span class="text-white m-auto">LOAD MORE</span></a>
+                    <a class="btn artcl-btn-less text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: none;" type="button"><span class="text-white m-auto">SEE LESS</span></a>
                 </div>
             </div>
         </div>

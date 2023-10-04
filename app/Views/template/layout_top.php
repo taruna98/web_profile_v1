@@ -162,6 +162,38 @@
             background-color: #C95C14;
         }
 
+        /* article */
+        #article {
+            background-color: #222;
+        }
+
+        #article .card {
+            border: none;
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        #article .card .card-text span {
+            color: #F66B0E;
+        }
+
+        #article .card .btn-detail {
+            height: 40px;
+            width: auto;
+            border: 2px solid #F66B0E;
+            margin: auto 0 auto auto;
+            border-radius: 50%;
+        }
+
+        #article .artcl-btn-load, #article .artcl-btn-less {
+            margin: 0 auto;
+            background-color: #F57C2A;
+            color: #EFEFEF;
+        }
+
+        #article .artcl-btn-load:hover, #article .artcl-btn-less:hover {
+            background-color: #C95C14;
+        }
+
         /* footer */
         .footer {
             background-color: #205375;
@@ -247,7 +279,7 @@
             font-size: 6rem;
         }
     </style>
-    
+
 </head>
 
 <body id="page-top">
