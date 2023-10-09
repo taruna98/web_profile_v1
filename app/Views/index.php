@@ -9,33 +9,62 @@
     <!-- About -->
     <section class="page-section" id="about">
         <div class="container">
+            <h2 class="section-heading ff-inter text-center text-white my-4">ABOUT ME</h2>
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12 col-md-12 col-lg-2 d-flex align-items-center justify-content-center">
-                            <img class="img-fluid rounded-circle border border-2" src="assets/img/img-profile.png"
-                                alt="img-profile" style="border-color: #F66B0E !important">
+                            <img class="img-fluid rounded-circle border border-2" src="assets/img/img-profile.png" alt="img-profile" style="border-color: #F66B0E !important">
                         </div>
-                        <div class="col col-12 col-md-12 col-lg-10">
-                            <h2 class="section-heading ff-inter text-center text-white my-2">ABOUT ME</h2>
+                        <div class="col col-12 col-md-12 col-lg-10 d-flex align-items-center">
                             <div class="ff-inter text-justify text-white fs-5">
                                 <p class="lh-sm"><?= $response['profile']['mds'] ?></p>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4">
-                        <h4 class="ff-inter text-center text-white my-3">SKILL</h4>
-                        <div class="col d-flex">
-                            <div class="row row-cols-auto justify-content-center mx-auto">
-                                <?php for ($i = 0; $i < count(explode('|', $response['profile']['msk'])); $i++) { ?>
-                                    <div class="col">
-                                        <p class="ff-inter text-center text-white fs-5">
-                                            <i class="fa-solid <?= (explode('-', explode('|', $response['profile']['msk'])[$i])[0] == '1') ? 'fa-circle-check' : 'fa-circle-exclamation' ?> fa-xl"></i> <?= explode('-', explode('|', $response['profile']['msk'])[$i])[1] ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
+                </div>
+            </div>
+            <div class="row skills">
+                <ul class="nav" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white active" id="skill-tab" data-bs-toggle="tab" data-bs-target="#skill" type="button" role="tab" aria-controls="skill" aria-selected="true">SKILL</a>
+                    </li>
+                    <li class="nav-item ms-2" role="presentation">
+                        <a class="nav-link text-white" id="tool-tab" data-bs-toggle="tab" data-bs-target="#tool" type="button" role="tab" aria-controls="tool" aria-selected="false">TOOL</a>
+                    </li>
+                </ul>
+                <div class="tab-content my-2" id="myTabContent">
+                    <div class="tab-pane fade show active" id="skill" role="tabpanel" aria-labelledby="skill-tab">
+                        <div class="row row-cols-2 row-cols-md-4">
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">SKILL 1</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">SKILL 2</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">SKILL 3</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">SKILL 4</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="tab-pane fade" id="tool" role="tabpanel" aria-labelledby="tool-tab">
+                        <div class="row row-cols-2 row-cols-md-4">
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">TOOL 1</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">TOOL 2</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">TOOL 3</span>
+                            </div>
+                            <div class="col d-flex p-1">
+                                <span class="w-100 p-2 rounded d-flex align-item-center">TOOL 4</span>
+                            </div>
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -69,7 +98,7 @@
     <!-- Portfolio -->
     <section class="page-section" id="portfolio">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center text-white">
                 <h2 class="section-heading ff-inter text-uppercase">PORTFOLIO</h2>
                 <p class="ff-inter text-uppercase fs-5 mb-4">LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND
                     TYPESCRIPTING INDUSTRY</p>

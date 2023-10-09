@@ -80,12 +80,12 @@
 
         /* about */
         #about {
-            background-color: #EFEFEF;
+            background-color: #112B3C;
         }
 
         #about .card {
-            background-color: #112B3C;
-            box-shadow: 0px 0px 10px 10px rgba(246, 107, 14, 0.75);
+            background-color: #13232D;
+            box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.75);
         }
 
         #about .fa-circle-check {
@@ -104,6 +104,27 @@
             #about .card-body div p {
                 font-size: 1rem;
             }
+        }
+
+        #about .skills {
+            margin: 2rem auto;
+            font-family: 'Inter', sans-serif;
+            color: #FFF;
+        }
+
+        #about .skills .nav .nav-item .active {
+            background-color: #DA6312;
+            border-radius: 10px;
+        }
+
+        #about .skills .nav .nav-item .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #about .skills .tab-pane .row .col span {
+            border: 2px solid #DA6312;
         }
 
         /* services */
@@ -132,19 +153,22 @@
 
         /* portfolio */
         #portfolio {
-            background-color: #EFEFEF;
+            background-color: #13232D;
         }
 
         #portfolio .card {
             border: none;
-            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 5px 5px rgba(246, 107, 14, 0.75);
+            background-color: #112B3C;
+            color: #EFEFEF;
         }
-
+        
         #portfolio .card .card-text span {
             color: #F66B0E;
         }
-
+        
         #portfolio .card .btn-detail {
+            color: #EFEFEF;
             height: 40px;
             width: auto;
             border: 2px solid #F66B0E;
@@ -152,10 +176,16 @@
             border-radius: 50%;
         }
 
+        #portfolio .card .btn-detail:hover {
+            color: #F66B0E;
+            border: 2px solid #EFEFEF;
+        }
+        
         #portfolio .port-btn-load, #portfolio .port-btn-less {
             margin: 0 auto;
             background-color: #F57C2A;
             color: #EFEFEF;
+            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
 
         #portfolio .port-btn-load:hover, #portfolio .port-btn-less:hover {
