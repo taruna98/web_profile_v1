@@ -59,8 +59,12 @@
         }
 
         /* header */
-        @keyframes blink {
+        .masthead {
+            height: 100vh;
+            width: auto;    
+        }
 
+        @keyframes blink {
             0%,
             100% {
                 border-right-color: transparent;
@@ -80,6 +84,8 @@
 
         /* about */
         #about {
+            height: 100vh;
+            width: auto;
             background-color: #112B3C;
         }
 
