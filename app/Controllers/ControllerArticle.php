@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Libraries\Database;
 
-class ControllerPortfolio
+class ControllerArticle
 {
     public function __construct()
     {
@@ -20,11 +20,11 @@ class ControllerPortfolio
     {
         $this->page;
         $this->baseUrl;
-
+        
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/' . $id; 
-
+        $url    = 'http://localhost:8000/article/' . $id; 
+        
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
@@ -40,7 +40,7 @@ class ControllerPortfolio
         curl_close($curl);
         $response   = json_decode($response, true);
 
-        require_once('app/Views/portfolio.php');
+        require_once('app/Views/article.php');
     }
     
     public function detail($id)
@@ -50,7 +50,7 @@ class ControllerPortfolio
         
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/detail/' . $id; 
+        $url    = 'http://localhost:8000/article/detail/' . $id; 
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -67,6 +67,6 @@ class ControllerPortfolio
         curl_close($curl);
         $response   = json_decode($response, true)[0];
 
-        require_once('app/Views/portfolio-detail.php');
+        require_once('app/Views/article-detail.php');
     }
 }

@@ -104,8 +104,8 @@
                     TYPESCRIPTING INDUSTRY</p>
             </div>
             <div class="row">
-                <?php for ($k = 0; $k < count($response['portfolio']); $k++) { ?>
-                    <div class="col-lg-4 col-sm-6 my-3 port-item" style="display: none">
+                <?php for ($k = 0; $k < 3; $k++) { ?>
+                    <div class="col-lg-4 col-sm-6 my-3 port-item">
                         <!-- portfolio items -->
                         <div class="card">
                             <img src="assets/img/port-<?= $k + 1 ?>.png" class="card-img-top" alt="th-portfolio">
@@ -124,8 +124,7 @@
                     </div>
                 <?php } ?>
                 <div class="col-12 my-3 d-flex justify-content-center">
-                    <a class="btn port-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: flex;" type="button"><span class="text-white m-auto">LOAD MORE</span></a>
-                    <a class="btn port-btn-less text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: none;" type="button"><span class="text-white m-auto">SEE LESS</span></a>
+                    <a href="<?= $this->baseUrl ?>?por/<?= $response['profile']['cod'] ?>" class="btn port-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE PORTFOLIO</span></a>
                 </div>
             </div>
         </div>
@@ -137,7 +136,7 @@
                 <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
                         <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
@@ -154,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
                         <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
@@ -171,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
+                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
                         <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
@@ -188,60 +187,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 4</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 5</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> tips and trick</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item" style="display: none">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 6</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-12 my-3 d-flex justify-content-center">
-                    <a class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: flex;" type="button"><span class="text-white m-auto">LOAD MORE</span></a>
-                    <a class="btn artcl-btn-less text-decoration-none mt-3 ff-inter" style="height: 40px; width: 160px; display: none;" type="button"><span class="text-white m-auto">SEE LESS</span></a>
+                    <a href="" class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE ARTICLE</span></a>
                 </div>
             </div>
         </div>

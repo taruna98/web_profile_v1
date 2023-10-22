@@ -22,7 +22,16 @@ $pageTemp 	= ltrim(substr($url, strlen($baseUrl)), '?');
 if (strpos($pageTemp, 'proid') !== false) {
 	$page = explode('/', $pageTemp)[0];
 	$id = explode('/', $pageTemp)[1];
+} else if (strpos($pageTemp, 'por') !== false) {
+	$page = explode('/', $pageTemp)[0];
+	$id = explode('/', $pageTemp)[1];
 } else if (strpos($pageTemp, 'porid') !== false) {
+	$page = explode('/', $pageTemp)[0];
+	$id = explode('/', $pageTemp)[1];
+} else if (strpos($pageTemp, 'art') !== false) {
+	$page = explode('/', $pageTemp)[0];
+	$id = explode('/', $pageTemp)[1];
+} else if (strpos($pageTemp, 'artid') !== false) {
 	$page = explode('/', $pageTemp)[0];
 	$id = explode('/', $pageTemp)[1];
 }
@@ -36,8 +45,17 @@ if (empty($page)) {
 		case 'proid':
 			$controllerHome->index($id);
 			break;
-		case 'porid':
+		case 'por':
 			$controllerPortfolio->index($id);
+			break;
+		case 'porid':
+			$controllerPortfolio->detail($id);
+			break;
+		case 'art':
+			$controllerArticle->index($id);
+			break;
+		case 'artid':
+			$controllerArticle->detail($id);
 			break;
 		default:
 			$controllerHome->index();

@@ -2,7 +2,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark container fixed-top p-0 rounded-bottom" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <h2 class="ff-inter text-white"><?= (strpos($this->page, 'proid') !== false) ? $response['profile']['nme'] : $response['nme'] ?></h2>
+                <h2 class="ff-inter text-white">
+                    <?= (strpos($this->page, 'proid') !== false) ? $response['profile']['nme'] : ((strpos($this->page, 'porid') !== false) ? $response['nme'] : $response[0]['nme']) ?>
+                </h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
