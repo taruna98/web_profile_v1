@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Personal - Web</title>
+    <title>Kretech - Home</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/icon-kretech.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon-kretech.png" />
     <!-- Font Awesome icons (free version) -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts -->
@@ -191,16 +191,19 @@
             margin: 0 auto;
             background-color: #F57C2A;
             color: #EFEFEF;
-            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
-
+        
         #portfolio .port-btn-load:hover, #portfolio .port-btn-less:hover {
             background-color: #C95C14;
+            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
 
         /* article */
         #article {
-            background-color: #222;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         #article .card {
@@ -217,7 +220,13 @@
             width: auto;
             border: 2px solid #F66B0E;
             margin: auto 0 auto auto;
-            border-radius: 50%;
+            border-radius: 8px !important;
+        }
+        
+        #article .card .btn-detail:hover {
+            background-color: #112B3C;
+            color: #F66B0E;
+            border: 2px solid #F66B0E;
         }
 
         #article .artcl-btn-load, #article .artcl-btn-less {
@@ -225,9 +234,10 @@
             background-color: #F57C2A;
             color: #EFEFEF;
         }
-
+        
         #article .artcl-btn-load:hover, #article .artcl-btn-less:hover {
             background-color: #C95C14;
+            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
 
         /* footer */
@@ -299,6 +309,60 @@
             background-color: #112B3C;
             color: #EFEFEF;
             box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <!-- page article -->
+    <style>
+        /* art head */
+        #art-head {
+            padding-top: 7.5rem;
+            padding-bottom: 3rem;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            color: #fff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #art-head .masthead-subheading {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        #art-head .masthead-heading {
+            font-size: 3.25rem;
+            font-weight: 700;
+            line-height: 3.25rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            #art-head {
+                padding-top: 10rem;
+                padding-bottom: 7.5rem;
+            }
+
+            #art-head .masthead-subheading {
+                font-size: 1.25rem;
+                line-height: 2.25rem;
+                margin-bottom: 2rem;
+            }
+
+            #art-head .masthead-heading {
+                font-size: 4.5rem;
+                font-weight: 700;
+                line-height: 4.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        /* art body */
+        #art-body {
+            background-color: #13232D !important;
+            color: #EFEFEF !important;
         }
     </style>
     <!-- page 404 -->

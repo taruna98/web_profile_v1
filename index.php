@@ -8,12 +8,14 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Controllers\ControllerHome;
 use Controllers\ControllerPortfolio;
+use Controllers\ControllerArticle;
 
 /**
  * Buat objek dari kelas Controller
  */
 $controllerHome = new ControllerHome();
 $controllerPortfolio = new ControllerPortfolio();
+$controllerArticle = new ControllerArticle();
 
 $baseUrl	= 'http://localhost/web_profile_v1/';
 $url 		= 'http' . (($_SERVER['SERVER_PORT'] == 443) ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

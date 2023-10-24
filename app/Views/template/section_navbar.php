@@ -3,7 +3,17 @@
         <div class="container">
             <a class="navbar-brand" href="#page-top">
                 <h2 class="ff-inter text-white">
-                    <?= (strpos($this->page, 'proid') !== false) ? $response['profile']['nme'] : ((strpos($this->page, 'porid') !== false) ? $response['nme'] : $response[0]['nme']) ?>
+                    <?php
+                    if (strpos($this->page, 'proid') !== false) {
+                        echo $response['profile']['nme'];
+                    } elseif (strpos($this->page, 'porid') !== false) {
+                        echo $response['nme'];
+                    } elseif (strpos($this->page, 'artid') !== false) {
+                        echo $response['nme'];
+                    } else {
+                        echo $response[0]['nme'];
+                    }
+                    ?>
                 </h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"

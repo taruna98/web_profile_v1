@@ -130,7 +130,7 @@
         </div>
     </section>
     <!-- Article -->
-    <section class="page-section" id="article">
+    <section class="page-section" id="article" style="background-image: url('assets/img/bg-article.png')">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
                 <div class="col-12 my-3 d-flex justify-content-center">
-                    <a href="" class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE ARTICLE</span></a>
+                    <a href="<?= $this->baseUrl ?>?art/<?= $response['profile']['cod'] ?>" class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE ARTICLE</span></a>
                 </div>
             </div>
         </div>
