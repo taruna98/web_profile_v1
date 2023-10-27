@@ -3,7 +3,7 @@
     <header class="port-head" id="port-head" style="background-image: url('assets/img/bg-portfolio.png')">
         <div class="container">
             <div class="masthead-heading text-uppercase"><?= $response['ttl'] ?></div>
-            <div class="masthead-subheading"><a class="text-decoration-none text-white" href=""><b>Home</b></a> / Portfolio Detail</div>
+            <div class="masthead-subheading"><a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?proid/<?= substr($response['id'], 0, 11) ?>"><b>Home</b></a> / <a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?por/<?= substr($response['id'], 0, 11) ?>"><b>Portfolio</b></a> / Detail</div>
         </div>
     </header>
     <!-- Portfolio Body -->

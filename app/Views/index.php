@@ -104,7 +104,8 @@
                     TYPESCRIPTING INDUSTRY</p>
             </div>
             <div class="row">
-                <?php for ($k = 0; $k < 3; $k++) { ?>
+                <?php $count_port = count($response['portfolio']) < 3 ? count($response['portfolio']) : 3; ?>
+                <?php for ($k = 0; $k < $count_port; $k++) { ?>
                     <div class="col-lg-4 col-sm-6 my-3 port-item">
                         <!-- portfolio items -->
                         <div class="card">
@@ -136,57 +137,26 @@
                 <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 1</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 2</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> coding</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                <?php $count_artcl = count($response['article']) < 3 ? count($response['article']) : 3; ?>
+                <?php for ($l = 0; $l < $count_artcl; $l++) { ?>
+                    <div class="col-lg-4 col-sm-6 my-3 artcl-item">
+                        <!-- article items -->
+                        <div class="card">
+                            <img src="assets/img/art-<?= $l + 1 ?>.png" class="card-img-top" alt="th-article">
+                            <div class="card-body row">
+                                <div class="col col-9">
+                                    <h4 class="card-title ff-inter text-capitalize"><?= $response['article'][$l]['ttl'] ?></h4>
+                                    <p class="card-text ff-inter text-uppercase"><?= $response['article'][$l]['ctg'] ?> <span class="fw-bold text-capitalize"><?= date("d M Y", strtotime($response['article'][$l]['cat'])) ?></span></p>
+                                </div>
+                                <div class="col col-3 d-flex">
+                                    <a href="<?= $this->baseUrl ?>?artid/<?= $response['article'][$l]['id'] ?>" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 my-3 artcl-item">
-                    <!-- article items -->
-                    <div class="card">
-                        <img src="assets/img/port-1.png" class="card-img-top" alt="th-article">
-                        <div class="card-body row">
-                            <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize">article 3</h4>
-                                <p class="card-text ff-inter text-uppercase"><span class="fw-bold text-capitalize">04 Oct 2023</span> music</p>
-                            </div>
-                            <div class="col col-3 d-flex">
-                                <a href="#" class="my-auto ms-auto btn btn-detail rounded-circle">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
                 <div class="col-12 my-3 d-flex justify-content-center">
                     <a href="<?= $this->baseUrl ?>?art/<?= $response['profile']['cod'] ?>" class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE ARTICLE</span></a>
                 </div>

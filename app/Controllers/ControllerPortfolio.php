@@ -66,7 +66,7 @@ class ControllerPortfolio
         $err        = curl_error($curl);
         curl_close($curl);
         $response   = json_decode($response, true)[0];
-
+        
         require_once('app/Views/portfolio-detail.php');
     }
 }

@@ -61,7 +61,10 @@
         /* header */
         .masthead {
             height: 100vh;
-            width: auto;    
+            width: auto;
+            display: flex;
+            justify-content: center;  
+            align-items: center;  
         }
 
         @keyframes blink {
@@ -131,6 +134,10 @@
 
         #about .skills .tab-pane .row .col span {
             border: 2px solid #DA6312;
+        }
+        #about .skills .tab-pane .row .col span:hover {
+            background-color: #DA6312;
+            cursor: pointer;
         }
 
         /* services */
@@ -242,7 +249,7 @@
 
         /* footer */
         .footer {
-            background-color: #205375;
+            background-color: #205375; /* 13232D */
             color: #EFEFEF;
         }
     </style>
@@ -363,6 +370,8 @@
         #art-body {
             background-color: #13232D !important;
             color: #EFEFEF !important;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
     </style>
     <!-- page 404 -->
