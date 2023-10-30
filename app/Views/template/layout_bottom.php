@@ -94,6 +94,116 @@
           // });
      </script>
 
+     <script>
+          // jQuery get by search portfolio
+          $(document).ready(function() {
+               // simpan data response dari PHP ke dalam variabel JavaScript
+               var portfolioData = <?= json_encode($response) ?>;
+               var baseUrl = <?= json_encode($this->baseUrl) ?>;
+               var $row = $('.row-portfolio');
+
+               // fungsi untuk menampilkan data sesuai dengan kata kunci
+               function filterData(searchTerm) {
+                    $row.empty();
+                    searchTerm = searchTerm.toLowerCase();
+
+                    $.each(portfolioData, function(index, item) {
+                         if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
+                              var $portfolioItem = $('<div class="col-lg-4 col-sm-6 my-3 port-item">');
+                              var $card = $('<div class="card">');
+                              var $img = $('<img src="assets/img/port-' + (index + 1) + '.png" class="card-img-top" alt="th-portfolio">');
+                              var $cardBody = $('<div class="card-body row">');
+                              var $col1 = $('<div class="col col-9">');
+                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + item.ttl + '</h4>');
+                              var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
+                              var $col2 = $('<div class="col col-3 d-flex">');
+                              var $link = $('<a href="' + baseUrl + '?porid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
+
+                              $col1.append($title);
+                              $col1.append($category);
+                              $col2.append($link);
+
+                              $cardBody.append($col1);
+                              $cardBody.append($col2);
+
+                              $card.append($img);
+                              $card.append($cardBody);
+
+                              $portfolioItem.append($card);
+                              $row.append($portfolioItem);
+                         }
+                    });
+               }
+
+               // fungsi untuk memformat tanggal
+               function formatDate(dateString) {
+                    var options = { year: 'numeric', month: 'short', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString(undefined, options);
+               }
+
+               // tambahkan event listener ke elemen input
+               $("#searchPortfolio").on("input", function() {
+                    var searchTerm = $(this).val();
+                    filterData(searchTerm);
+               });
+          });
+     </script>
+
+     <script>
+          // jQuery get by search article
+          $(document).ready(function() {
+               // simpan data response dari PHP ke dalam variabel JavaScript
+               var articleData = <?= json_encode($response) ?>;
+               var baseUrl = <?= json_encode($this->baseUrl) ?>;
+               var $row = $('.row-article');
+
+               // fungsi untuk menampilkan data sesuai dengan kata kunci
+               function filterData(searchTerm) {
+                    $row.empty();
+                    searchTerm = searchTerm.toLowerCase();
+
+                    $.each(articleData, function(index, item) {
+                         if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
+                              var $articleItem = $('<div class="col-lg-4 col-sm-6 my-3 art-item">');
+                              var $card = $('<div class="card">');
+                              var $img = $('<img src="assets/img/art-' + (index + 1) + '.png" class="card-img-top" alt="th-article">');
+                              var $cardBody = $('<div class="card-body row">');
+                              var $col1 = $('<div class="col col-9">');
+                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + item.ttl + '</h4>');
+                              var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
+                              var $col2 = $('<div class="col col-3 d-flex">');
+                              var $link = $('<a href="' + baseUrl + '?artid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
+
+                              $col1.append($title);
+                              $col1.append($category);
+                              $col2.append($link);
+
+                              $cardBody.append($col1);
+                              $cardBody.append($col2);
+
+                              $card.append($img);
+                              $card.append($cardBody);
+
+                              $articleItem.append($card);
+                              $row.append($articleItem);
+                         }
+                    });
+               }
+
+               // fungsi untuk memformat tanggal
+               function formatDate(dateString) {
+                    var options = { year: 'numeric', month: 'short', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString(undefined, options);
+               }
+
+               // tambahkan event listener ke elemen input
+               $("#searchArticle").on("input", function() {
+                    var searchTerm = $(this).val();
+                    filterData(searchTerm);
+               });
+          });
+     </script>
+
 </body>
 
 </html>

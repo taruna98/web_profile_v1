@@ -7,10 +7,10 @@
                     <a class="text-decoration-none text-white" href=""><b>Home</b></a> &nbsp;/ Article
                 </div>
                 <div class="d-flex">
-                    <input class="form-control" type="search" placeholder="search article here" aria-label="Search">
+                    <input class="form-control" id="searchArticle" type="search" placeholder="search article here" aria-label="Search">
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row row-article mt-4">
                 <?php for ($i = 0; $i < count($response); $i++) { ?>
                     <div class="col-lg-4 col-sm-6 my-3 art-item">
                         <!-- article items -->
