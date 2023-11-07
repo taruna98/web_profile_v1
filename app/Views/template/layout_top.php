@@ -14,8 +14,7 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap"
-        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" type="text/css">
 
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="assets/css/styles.css" rel="stylesheet" />
@@ -63,11 +62,12 @@
             height: 100vh;
             width: auto;
             display: flex;
-            justify-content: center;  
-            align-items: center;  
+            justify-content: center;
+            align-items: center;
         }
 
         @keyframes blink {
+
             0%,
             100% {
                 border-right-color: transparent;
@@ -135,6 +135,7 @@
         #about .skills .tab-pane .row .col span {
             border: 2px solid #DA6312;
         }
+
         #about .skills .tab-pane .row .col span:hover {
             background-color: #DA6312;
             cursor: pointer;
@@ -175,11 +176,11 @@
             background-color: #112B3C;
             color: #EFEFEF;
         }
-        
+
         #portfolio .card .card-text span {
             color: #F66B0E;
         }
-        
+
         #portfolio .card .btn-detail {
             color: #EFEFEF;
             height: 40px;
@@ -193,14 +194,16 @@
             color: #F66B0E;
             border: 2px solid #EFEFEF;
         }
-        
-        #portfolio .port-btn-load, #portfolio .port-btn-less {
+
+        #portfolio .port-btn-load,
+        #portfolio .port-btn-less {
             margin: 0 auto;
             background-color: #F57C2A;
             color: #EFEFEF;
         }
-        
-        #portfolio .port-btn-load:hover, #portfolio .port-btn-less:hover {
+
+        #portfolio .port-btn-load:hover,
+        #portfolio .port-btn-less:hover {
             background-color: #C95C14;
             box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
@@ -229,27 +232,30 @@
             margin: auto 0 auto auto;
             border-radius: 8px !important;
         }
-        
+
         #article .card .btn-detail:hover {
             background-color: #112B3C;
             color: #F66B0E;
             border: 2px solid #F66B0E;
         }
 
-        #article .artcl-btn-load, #article .artcl-btn-less {
+        #article .artcl-btn-load,
+        #article .artcl-btn-less {
             margin: 0 auto;
             background-color: #F57C2A;
             color: #EFEFEF;
         }
-        
-        #article .artcl-btn-load:hover, #article .artcl-btn-less:hover {
+
+        #article .artcl-btn-load:hover,
+        #article .artcl-btn-less:hover {
             background-color: #C95C14;
             box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.75);
         }
 
         /* footer */
         .footer {
-            background-color: #205375; /* 13232D */
+            background-color: #205375;
+            /* 13232D */
             color: #EFEFEF;
         }
     </style>
@@ -306,10 +312,18 @@
             height: 15px;
             width: 15px;
             border-radius: 50%;
+            border: 2px solid #112B3C;
         }
 
         #port-body .carousel-inner {
             box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        #port-body .carousel-inner .carousel-caption h5,
+        #port-body .carousel-inner .carousel-caption p {
+            background-color: rgba(17, 43, 60, 0.5);
+            border-radius: 0.25rem;
+            box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
         }
 
         #port-body .card {
@@ -383,7 +397,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         #page-404 .d-block div:first-child {
             font-size: 6rem;
         }
