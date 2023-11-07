@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 port-item">
                     <!-- portfolio items -->
                     <div class="card">
-                        <img src="assets/img/port-<?= $k + 1 ?>.png" class="card-img-top" alt="th-portfolio">
+                        <img src="assets/img/1dGV4dCBkdW-port-<?= $k + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= $response['portfolio'][$k]['ttl'] ?></h4>
