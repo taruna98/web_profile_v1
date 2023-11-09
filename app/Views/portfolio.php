@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 port-item">
                     <!-- portfolio items -->
                     <div class="card">
-                        <img src="assets/img/1dGV4dCBkdW-port-<?= $i + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
+                        <img src="assets/img/<?= substr($response[$i]['id'], 0, 11) ?>-port-<?= $i + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= $response[$i]['ttl'] ?></h4>
