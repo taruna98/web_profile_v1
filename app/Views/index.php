@@ -1,6 +1,6 @@
 <?php require('template/layout_top.php') ?>
 <!-- Masthead -->
-<header class="masthead" style="background-image: url('assets/img/bg-home.png')">
+<header class="masthead" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-home.png')">
     <div class="container">
         <div class="masthead-heading ff-pacifico text-capitalize">hello iam <?= $response['profile']['nme'] ?></div>
         <div class="masthead-subheading title-type ff-inter" id="title-type">-</div>
@@ -14,7 +14,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col col-12 col-md-12 col-lg-2 d-flex align-items-center justify-content-center">
-                        <img class="img-fluid rounded-circle border border-2" src="assets/img/img-profile.png" alt="img-profile" style="border-color: #F66B0E !important">
+                        <img class="img-fluid rounded-circle border border-2" src="assets/img/<?= $response['profile']['cod'] ?>-img-profile.png" alt="img-profile" style="border-color: #F66B0E !important">
                     </div>
                     <div class="col col-12 col-md-12 col-lg-10 d-flex align-items-center">
                         <div class="ff-inter text-justify text-white fs-5">
@@ -57,7 +57,7 @@
     </div>
 </section>
 <!-- Services -->
-<section class="page-section" id="services" style="background-image: url('assets/img/bg-service.png')">
+<section class="page-section" id="services" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-service.png')">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-white text-uppercase">SERVICE</h2>
@@ -94,7 +94,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 port-item">
                     <!-- portfolio items -->
                     <div class="card">
-                        <img src="assets/img/1dGV4dCBkdW-port-<?= $k + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
+                        <img src="assets/img/<?= $response['profile']['cod'] ?>-port-<?= $k + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= $response['portfolio'][$k]['ttl'] ?></h4>
@@ -116,7 +116,7 @@
     </div>
 </section>
 <!-- Article -->
-<section class="page-section" id="article" style="background-image: url('assets/img/bg-article.png')">
+<section class="page-section" id="article" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-article.png')">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
@@ -127,7 +127,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
-                        <img src="assets/img/art-<?= $l + 1 ?>.png" class="card-img-top" alt="th-article">
+                        <img src="assets/img/<?= $response['profile']['cod'] ?>-art-<?= $l + 1 ?>.png" class="card-img-top" alt="th-article">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= $response['article'][$l]['ttl'] ?></h4>

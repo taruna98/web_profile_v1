@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Kretech - Home</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/img/icon-kretech.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/<?= $response['profile']['cod'] ?>-icon-kretech.png" />
     <!-- Font Awesome icons (free version) -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts -->
