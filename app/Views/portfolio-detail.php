@@ -20,7 +20,7 @@
                     <div class="carousel-inner rounded">
                         <?php for ($j = 0; $j < count(explode('|', $response['sbt'])); $j++) { ?>
                             <div class="carousel-item <?= ($j == 0) ? 'active' : '' ?>">
-                                <img src="assets/img/1dGV4dCBkdW-port-<?= substr($response['id'], -3) ?>-<?= ($j + 1) ?>.jpg" class="d-block w-100" alt="img-slider">
+                                <img src="assets/img/<?= substr($response['id'], 0, 11) ?>-port-<?= substr($response['id'], -3) ?>-<?= ($j + 1) ?>.jpg" class="d-block w-100" alt="img-slider">
                                 <div class="carousel-caption d-none d-md-block ff-inter">
                                     <h5 class="text-capitalize"><?= explode('|', $response['sbt'])[$j] ?></h5>
                                     <p><?= explode('|', $response['dsc'])[$j] ?></p>

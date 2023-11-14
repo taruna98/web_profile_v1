@@ -20,10 +20,11 @@ class ControllerPortfolio
     {
         $this->page;
         $this->baseUrl;
+        $this->proId = $id;
 
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/' . $id; 
+        $url    = 'http://localhost:8000/portfolio/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -42,15 +43,15 @@ class ControllerPortfolio
 
         require_once('app/Views/portfolio.php');
     }
-    
+
     public function detail($id)
     {
         $this->page;
         $this->baseUrl;
-        
+
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/detail/' . $id; 
+        $url    = 'http://localhost:8000/portfolio/detail/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -66,7 +67,7 @@ class ControllerPortfolio
         $err        = curl_error($curl);
         curl_close($curl);
         $response   = json_decode($response, true)[0];
-        
+
         require_once('app/Views/portfolio-detail.php');
     }
 }

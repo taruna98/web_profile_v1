@@ -20,11 +20,12 @@ class ControllerArticle
     {
         $this->page;
         $this->baseUrl;
-        
+        $this->proId = $id;
+
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/article/' . $id; 
-        
+        $url    = 'http://localhost:8000/article/' . $id;
+
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
@@ -42,15 +43,15 @@ class ControllerArticle
 
         require_once('app/Views/article.php');
     }
-    
+
     public function detail($id)
     {
         $this->page;
         $this->baseUrl;
-        
+
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/article/detail/' . $id; 
+        $url    = 'http://localhost:8000/article/detail/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,

@@ -4,7 +4,7 @@
     <div class="container ff-inter">
         <div class="d-flex justify-content-between text-white">
             <div class="d-flex align-items-center">
-                <a class="text-decoration-none text-white" href=""><b>Home</b></a> &nbsp;/ Article
+                <a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?proid/<?= $this->proId ?>"><b>Home</b></a> &nbsp;/ Article
             </div>
             <div class="d-flex">
                 <input class="form-control" id="searchArticle" type="search" placeholder="search article here" aria-label="Search">
