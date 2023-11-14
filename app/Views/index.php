@@ -127,10 +127,10 @@
                 <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
-                        <img src="assets/img/<?= $response['profile']['cod'] ?>-art-<?= $l + 1 ?>.png" class="card-img-top" alt="th-article">
+                        <img src="assets/img/<?= $response['profile']['cod'] ?>-art-<?= $l + 1 ?>.jpg" class="card-img-top" alt="th-article">
                         <div class="card-body row">
                             <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize"><?= $response['article'][$l]['ttl'] ?></h4>
+                                <h4 class="card-title ff-inter text-capitalize"><?= strlen($response['article'][$l]['ttl']) > 20 ? substr($response['article'][$l]['ttl'], 0, 20) . '...' : $response['article'][$l]['ttl'] ?></h4>
                                 <p class="card-text ff-inter text-uppercase"><?= $response['article'][$l]['ctg'] ?> <span class="fw-bold text-capitalize"><?= date("d M Y", strtotime($response['article'][$l]['cat'])) ?></span></p>
                             </div>
                             <div class="col col-3 d-flex">

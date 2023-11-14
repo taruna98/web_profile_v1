@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Kretech - Home</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/img/<?= $response['profile']['cod'] ?>-icon-kretech.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon-kretech.png" />
     <!-- Font Awesome icons (free version) -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts -->
@@ -386,6 +386,21 @@
             color: #EFEFEF !important;
             padding-top: 2rem;
             padding-bottom: 2rem;
+        }
+
+        #art-body .responsive-iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* perbandingan lebar dan tinggi sesuai aspek rasio 16:9 */
+        }
+
+        #art-body .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
     <!-- page 404 -->

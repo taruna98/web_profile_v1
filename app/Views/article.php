@@ -15,10 +15,10 @@
                 <div class="col-lg-4 col-sm-6 my-3 art-item">
                     <!-- article items -->
                     <div class="card">
-                        <img src="assets/img/<?= substr($response[$i]['id'], 0, 11) ?>-art-<?= $i + 1 ?>.png" class="card-img-top" alt="th-article">
+                        <img src="assets/img/<?= substr($response[$i]['id'], 0, 11) ?>-art-<?= $i + 1 ?>.jpg" class="card-img-top" alt="th-article">
                         <div class="card-body row">
                             <div class="col col-9">
-                                <h4 class="card-title ff-inter text-capitalize"><?= $response[$i]['ttl'] ?></h4>
+                                <h4 class="card-title ff-inter text-capitalize"><?= strlen($response[$i]['ttl']) > 20 ? substr($response[$i]['ttl'], 0, 20) . '...' : $response[$i]['ttl'] ?></h4>
                                 <p class="card-text ff-inter text-uppercase"><?= $response[$i]['ctg'] ?> <span class="fw-bold text-capitalize"><?= date("d M Y", strtotime($response[$i]['cat'])) ?></span></p>
                             </div>
                             <div class="col col-3 d-flex">
