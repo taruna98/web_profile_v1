@@ -1,8 +1,8 @@
      <!-- Main Content -->
-     
+
      <!-- Footer -->
      <?php require('section_footer.php') ?>
-     
+
      <!-- Bootstrap core JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -22,11 +22,11 @@
           var texts = "<?= isset($response['profile']['hsb']) ? $response['profile']['hsb'] : 'undefined'; ?>";
           if (texts !== 'undefined') {
                var texts = texts.split('|');
-     
+
                let currentTextIndex = 0;
                let charIndex = 0;
                const textElement = $("#title-type");
-     
+
                function type() {
                     const currentText = texts[currentTextIndex];
                     if (charIndex < currentText.length) {
@@ -37,7 +37,7 @@
                          setTimeout(erase, 1000); // Tunggu 1 detik sebelum menghapus
                     }
                }
-     
+
                function erase() {
                     const currentText = texts[currentTextIndex];
                     if (charIndex >= 0) {
@@ -49,7 +49,7 @@
                          setTimeout(type, 500); // Tunggu 0.5 detik sebelum mengetik teks berikutnya
                     }
                }
-     
+
                type();
           }
      </script>
@@ -111,10 +111,10 @@
                          if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
                               var $portfolioItem = $('<div class="col-lg-4 col-sm-6 my-3 port-item">');
                               var $card = $('<div class="card">');
-                              var $img = $('<img src="assets/img/port-' + (index + 1) + '.png" class="card-img-top" alt="th-portfolio">');
+                              var $img = $('<img src="assets/img/' + (item.id.slice(0, 11)) + '-port-' + (index + 1) + '.jpg" class="card-img-top" alt="th-portfolio">');
                               var $cardBody = $('<div class="card-body row">');
                               var $col1 = $('<div class="col col-9">');
-                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + item.ttl + '</h4>');
+                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
                               var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
                               var $col2 = $('<div class="col col-3 d-flex">');
                               var $link = $('<a href="' + baseUrl + '?porid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
@@ -137,8 +137,14 @@
 
                // fungsi untuk memformat tanggal
                function formatDate(dateString) {
-                    var options = { year: 'numeric', month: 'short', day: 'numeric' };
-                    return new Date(dateString).toLocaleDateString(undefined, options);
+                    var date = new Date(dateString);
+                    var day = String(date.getDate()).padStart(2, '0');
+                    var month = date.toLocaleString('default', {
+                         month: 'short'
+                    });
+                    var year = date.getFullYear();
+
+                    return `${day} ${month} ${year}`;
                }
 
                // tambahkan event listener ke elemen input
@@ -166,10 +172,10 @@
                          if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
                               var $articleItem = $('<div class="col-lg-4 col-sm-6 my-3 art-item">');
                               var $card = $('<div class="card">');
-                              var $img = $('<img src="assets/img/art-' + (index + 1) + '.png" class="card-img-top" alt="th-article">');
+                              var $img = $('<img src="assets/img/' + (item.id.slice(0, 11)) + '-art-' + (index + 1) + '.jpg" class="card-img-top" alt="th-article">');
                               var $cardBody = $('<div class="card-body row">');
                               var $col1 = $('<div class="col col-9">');
-                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + item.ttl + '</h4>');
+                              var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
                               var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
                               var $col2 = $('<div class="col col-3 d-flex">');
                               var $link = $('<a href="' + baseUrl + '?artid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
@@ -192,8 +198,14 @@
 
                // fungsi untuk memformat tanggal
                function formatDate(dateString) {
-                    var options = { year: 'numeric', month: 'short', day: 'numeric' };
-                    return new Date(dateString).toLocaleDateString(undefined, options);
+                    var date = new Date(dateString);
+                    var day = String(date.getDate()).padStart(2, '0');
+                    var month = date.toLocaleString('default', {
+                         month: 'short'
+                    });
+                    var year = date.getFullYear();
+
+                    return `${day} ${month} ${year}`;
                }
 
                // tambahkan event listener ke elemen input
@@ -204,6 +216,6 @@
           });
      </script>
 
-</body>
+     </body>
 
-</html>
+     </html>
