@@ -87,7 +87,7 @@
 
         /* about */
         #about {
-            height: 100vh;
+            min-height: 100vh;
             width: auto;
             background-color: #112B3C;
         }

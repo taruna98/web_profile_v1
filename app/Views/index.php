@@ -35,7 +35,7 @@
             </ul>
             <div class="tab-content my-2" id="myTabContent">
                 <div class="tab-pane fade show active" id="skill" role="tabpanel" aria-labelledby="skill-tab">
-                    <div class="row row-cols-2 row-cols-md-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         <?php for ($m = 0; $m < count(explode('|', $response['profile']['msk'])); $m++) { ?>
                             <div class="col d-flex p-1">
                                 <span class="w-100 p-2 rounded d-flex align-item-center"><?= explode('|', $response['profile']['msk'])[$m] ?></span>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tool" role="tabpanel" aria-labelledby="tool-tab">
-                    <div class="row row-cols-2 row-cols-md-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         <?php for ($n = 0; $n < count(explode('|', $response['profile']['mtl'])); $n++) { ?>
                             <div class="col d-flex p-1">
                                 <span class="w-100 p-2 rounded d-flex align-item-center"><?= explode('|', $response['profile']['mtl'])[$n] ?></span>
