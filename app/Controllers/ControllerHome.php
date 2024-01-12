@@ -18,9 +18,6 @@ class ControllerHome
 
     public function index($id)
     {
-        $this->page;
-        $this->baseUrl;
-
         // get data from API
         $curl   = curl_init();
         $url    = "http://localhost:8000/profile/" . $id; 
@@ -34,8 +31,20 @@ class ControllerHome
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache"
             ),
+            CURLOPT_SSL_VERIFYPEER => false,
         ));
+
         $response   = curl_exec($curl);
+        
+        if ($response == null || $response == '[]') {
+            header('Location: http://localhost/web_profile_v1/');
+        }
+
+        if (curl_errno($curl)) {
+            echo 'Curl error: ' . curl_error($curl);
+            die();
+        }
+        
         $err        = curl_error($curl);
         curl_close($curl);
         $response   = json_decode($response, true); // because of true, it's in an array

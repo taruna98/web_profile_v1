@@ -1,4 +1,1 @@
-progress personal web :
-- [v] fixing navbar
-- [v] show more / see less section portfolio
-- [-] set default if not exist id, redirect to 404 (make page 404)
+wellcome to my personal website
