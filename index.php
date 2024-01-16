@@ -17,7 +17,7 @@ $controllerHome = new ControllerHome();
 $controllerPortfolio = new ControllerPortfolio();
 $controllerArticle = new ControllerArticle();
 
-$baseUrl	= 'https://kretech.great-site.net/';
+$baseUrl	= 'http://localhost/web_profile_v1/'; /** https://kretech.great-site.net/ */
 $url 		= 'http' . (($_SERVER['SERVER_PORT'] == 443) ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $pageTemp 	= ltrim(substr($url, strlen($baseUrl)), '?');
 
