@@ -13,8 +13,9 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col col-12 col-md-12 col-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="col col-12 col-md-12 col-lg-2 d-flex flex-column align-items-center justify-content-center">
                         <img class="img-fluid rounded-circle border border-2" src="assets/img/<?= $response['profile']['cod'] ?>-img-profile.png" alt="img-profile" style="border-color: #F66B0E !important">
+                        <button type="button" class="download_cv btn btn-outline-light w-100 mt-4 mb-2 ff-inter"> <i class="fas fa-download"></i> &nbsp; Download CV</button>
                     </div>
                     <div class="col col-12 col-md-12 col-lg-10 d-flex align-items-center">
                         <div class="ff-inter text-justify text-white fs-5">

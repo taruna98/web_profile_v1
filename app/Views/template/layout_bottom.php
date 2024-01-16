@@ -95,6 +95,15 @@
      </script>
 
      <script>
+          $(document).ready(function() {
+               $('.download_cv').click(function() {
+                    var file = 'assets/file/1AAxxxxxxxx_CV.pdf';
+                    window.open(file, '_blank');
+               });
+          });
+     </script>
+
+     <script>
           // jQuery get by search portfolio
           $(document).ready(function() {
                // simpan data response dari PHP ke dalam variabel JavaScript
