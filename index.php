@@ -10,6 +10,10 @@ use Controllers\ControllerHome;
 use Controllers\ControllerPortfolio;
 use Controllers\ControllerArticle;
 
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 /**
  * Buat objek dari kelas Controller
  */
@@ -17,7 +21,7 @@ $controllerHome = new ControllerHome();
 $controllerPortfolio = new ControllerPortfolio();
 $controllerArticle = new ControllerArticle();
 
-$baseUrl	= 'http://localhost/web_profile_v1/'; /** https://kretech.great-site.net/ */
+$baseUrl	= $_ENV['BASE_URL'];
 $url 		= 'http' . (($_SERVER['SERVER_PORT'] == 443) ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $pageTemp 	= ltrim(substr($url, strlen($baseUrl)), '?');
 

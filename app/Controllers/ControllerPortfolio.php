@@ -4,14 +4,20 @@ namespace Controllers;
 
 use Libraries\Database;
 
+// get file .env
+require_once str_replace('\app\Controllers', '', __DIR__) . '/vendor/autoload.php';
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(str_replace('\app\Controllers', '', __DIR__));
+$dotenv->load();
+
 class ControllerPortfolio
 {
     public function __construct()
     {
         // $db             = new Database();
-        // $this->mysql    = $db->connect('localhost', 'api_web_v1', 'root', '');
+        // $this->mysql    = $db->connect($_ENV['DB_HOST_1'], $_ENV['DB_NAME_1'], $_ENV['DB_USER_1'], $_ENV['DB_PASS_1']);
 
-        $this->baseUrl  = 'http://localhost/web_profile_v1/';
+        $this->baseUrl  = $_ENV['BASE_URL'];
         $this->url      = 'http' . (($_SERVER['SERVER_PORT'] == 443) ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         $this->page     = ltrim(substr($this->url, strlen($this->baseUrl)), '?');
     }
@@ -24,7 +30,7 @@ class ControllerPortfolio
 
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/' . $id;
+        $url    = $_ENV['API_URL'] . 'portfolio/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -51,7 +57,7 @@ class ControllerPortfolio
 
         // get data from API
         $curl   = curl_init();
-        $url    = 'http://localhost:8000/portfolio/detail/' . $id;
+        $url    = $_ENV['API_URL'] . 'portfolio/detail/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
