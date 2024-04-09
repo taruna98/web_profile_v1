@@ -1,9 +1,9 @@
 <?php require('template/layout_top.php') ?>
 <!-- Portfolio Header -->
-<header class="port-head" id="port-head" style="background-image: url('assets/img/<?= substr($response['id'], 0, 11) ?>-bg-portfolio-dtl.png')">
+<header class="port-head" id="port-head" style="background-image: url('assets/img/<?= $response['cod'] ?>-bg-portfolio-dtl.png')">
     <div class="container">
         <div class="masthead-heading text-uppercase"><?= $response['ttl'] ?></div>
-        <div class="masthead-subheading"><a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?proid/<?= substr($response['id'], 0, 11) ?>"><b>Home</b></a> / <a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?por/<?= substr($response['id'], 0, 11) ?>"><b>Portfolio</b></a> / Detail</div>
+        <div class="masthead-subheading"><a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?proid/<?= $response['cod'] ?>"><b>Home</b></a> / <a class="text-decoration-none text-white" href="<?= $this->baseUrl ?>?por/<?= $response['cod'] ?>"><b>Portfolio</b></a> / Detail</div>
     </div>
 </header>
 <!-- Portfolio Body -->
@@ -20,7 +20,7 @@
                     <div class="carousel-inner rounded">
                         <?php for ($j = 0; $j < count(explode('|', $response['sbt'])); $j++) { ?>
                             <div class="carousel-item <?= ($j == 0) ? 'active' : '' ?>">
-                                <img src="assets/img/<?= substr($response['id'], 0, 11) ?>-port-<?= substr($response['id'], -3) ?>-<?= ($j + 1) ?>.jpg" class="d-block w-100" alt="img-slider">
+                                <img src="assets/img/<?= $response['cod'] ?>-port-<?= substr($response['id'], -3) ?>-<?= ($j + 1) ?>.jpg" class="d-block w-100" alt="img-slider">
                                 <div class="carousel-caption d-none d-md-block ff-inter">
                                     <h5 class="text-capitalize"><?= explode('|', $response['sbt'])[$j] ?></h5>
                                     <p><?= explode('|', $response['dsc'])[$j] ?></p>

@@ -30,7 +30,7 @@ class ControllerPortfolio
 
         // get data from API
         $curl   = curl_init();
-        $url    = $_ENV['API_URL'] . 'portfolio/' . $id;
+        $url    = $_ENV['API_URL'] . 'profile/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -46,6 +46,11 @@ class ControllerPortfolio
         $err        = curl_error($curl);
         curl_close($curl);
         $response   = json_decode($response, true);
+        foreach ($response['portfolio'] as &$item) {
+            $item['nme'] = $response['profile']['nme'];
+            $item['cod'] = $response['profile']['cod'];
+        }
+        $response   = $response['portfolio'];
 
         require_once('app/Views/portfolio.php');
     }
@@ -57,7 +62,7 @@ class ControllerPortfolio
 
         // get data from API
         $curl   = curl_init();
-        $url    = $_ENV['API_URL'] . 'portfolio/detail/' . $id;
+        $url    = $_ENV['API_URL'] . 'profile/portfolio/detail/' . $id;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -72,7 +77,7 @@ class ControllerPortfolio
         $response   = curl_exec($curl);
         $err        = curl_error($curl);
         curl_close($curl);
-        $response   = json_decode($response, true)[0];
+        $response   = json_decode($response, true);
 
         require_once('app/Views/portfolio-detail.php');
     }

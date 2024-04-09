@@ -55,6 +55,10 @@ class ControllerHome
         curl_close($curl);
         $response   = json_decode($response, true); // because of true, it's in an array
 
+        $response['profile']['hsb'] = str_replace(', ', '|', $response['profile']['hsb']);
+        $response['profile']['msk'] = str_replace(', ', '|', $response['profile']['msk']);
+        $response['profile']['mtl'] = str_replace(', ', '|', $response['profile']['mtl']);
+
         require_once('app/Views/index.php');
     }
     
