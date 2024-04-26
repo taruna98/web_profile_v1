@@ -95,7 +95,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 port-item">
                     <!-- portfolio items -->
                     <div class="card">
-                        <img src="assets/img/<?= $response['profile']['cod'] ?>-port-<?= $k + 1 ?>.jpg" class="card-img-top" alt="th-portfolio">
+                        <img src="assets/img/<?= $response['profile']['cod'] ?>-port-00<?= $k + 1 ?>-1.jpg" class="card-img-top" alt="th-portfolio">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= $response['portfolio'][$k]['ttl'] ?></h4>
@@ -128,7 +128,7 @@
                 <div class="col-lg-4 col-sm-6 my-3 artcl-item">
                     <!-- article items -->
                     <div class="card">
-                        <img src="assets/img/<?= $response['profile']['cod'] ?>-art-<?= $l + 1 ?>.jpg" class="card-img-top" alt="th-article">
+                        <img src="assets/img/<?= $response['profile']['cod'] ?>-art-00<?= $l + 1 ?>.jpg" class="card-img-top" alt="th-article">
                         <div class="card-body row">
                             <div class="col col-9">
                                 <h4 class="card-title ff-inter text-capitalize"><?= strlen($response['article'][$l]['ttl']) > 20 ? substr($response['article'][$l]['ttl'], 0, 20) . '...' : $response['article'][$l]['ttl'] ?></h4>

@@ -120,7 +120,7 @@
                          if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
                               var $portfolioItem = $('<div class="col-lg-4 col-sm-6 my-3 port-item">');
                               var $card = $('<div class="card">');
-                              var $img = $('<img src="assets/img/' + (item.id.slice(0, 11)) + '-port-' + (index + 1) + '.jpg" class="card-img-top" alt="th-portfolio">');
+                              var $img = $('<img src="assets/img/' + item.cod + '-port-' + (item.id.slice(0, 11)) + '-1.jpg" class="card-img-top" alt="th-portfolio">');
                               var $cardBody = $('<div class="card-body row">');
                               var $col1 = $('<div class="col col-9">');
                               var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
@@ -181,7 +181,7 @@
                          if (item.ttl.toLowerCase().includes(searchTerm) || item.ctg.toLowerCase().includes(searchTerm) || item.cat.toLowerCase().includes(searchTerm)) {
                               var $articleItem = $('<div class="col-lg-4 col-sm-6 my-3 art-item">');
                               var $card = $('<div class="card">');
-                              var $img = $('<img src="assets/img/' + (item.id.slice(0, 11)) + '-art-' + (index + 1) + '.jpg" class="card-img-top" alt="th-article">');
+                              var $img = $('<img src="assets/img/' + item.cod + '-art-' + item.id + '.jpg" class="card-img-top" alt="th-article">');
                               var $cardBody = $('<div class="card-body row">');
                               var $col1 = $('<div class="col col-9">');
                               var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
