@@ -1,6 +1,6 @@
 <?php require('template/layout_top.php') ?>
 <!-- Masthead -->
-<header class="masthead" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-home.png')">
+<header class="masthead" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-home.jpg?v=<?= rand(10, 100) ?>')">
     <div class="container">
         <div class="masthead-heading ff-pacifico text-capitalize">hello iam <?= $response['profile']['nme'] ?></div>
         <div class="masthead-subheading title-type ff-inter" id="title-type">-</div>
