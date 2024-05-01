@@ -58,7 +58,7 @@
     </div>
 </section>
 <!-- Services -->
-<section class="page-section" id="services" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-service.png')">
+<section class="page-section" id="services" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-service.jpg?v=<?= rand(10, 100) ?>')">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-white text-uppercase">SERVICE</h2>
@@ -117,7 +117,7 @@
     </div>
 </section>
 <!-- Article -->
-<section class="page-section" id="article" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-article.png')">
+<section class="page-section" id="article" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-article.jpg?v=<?= rand(10, 100) ?>')">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
