@@ -68,7 +68,7 @@
                         } 
                         ?>
                     ">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="
+                    <li class="nav-item"><a class="nav-link <?= (strpos($this->page, 'porid') !== false) ? 'active' : '' ?>" href="
                         <?php 
                         if (strpos($this->page, 'proid') !== false) { 
                             echo '#portfolio'; 
@@ -83,7 +83,7 @@
                         } 
                         ?>
                     ">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="
+                    <li class="nav-item"><a class="nav-link <?= (strpos($this->page, 'artid') !== false) ? 'active' : '' ?>" href="
                         <?php 
                         if (strpos($this->page, 'proid') !== false) { 
                             echo '#article'; 

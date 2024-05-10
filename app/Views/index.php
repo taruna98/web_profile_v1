@@ -102,7 +102,7 @@
                                 <p class="card-text ff-inter text-uppercase"><?= $response['portfolio'][$k]['ctg'] ?> <span class="fw-bold text-capitalize"><?= date("d M Y", strtotime($response['portfolio'][$k]['cat'])) ?></span></p>
                             </div>
                             <div class="col col-3 d-flex">
-                                <a href="<?= $this->baseUrl ?>?porid/<?= $response['portfolio'][$k]['id'] ?>" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                <a href="<?= $this->baseUrl ?>?porid/<?= $response['profile']['cod'] ?>-<?= $response['portfolio'][$k]['id'] ?>" class="my-auto ms-auto btn btn-detail rounded-circle">
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -135,7 +135,7 @@
                                 <p class="card-text ff-inter text-uppercase"><?= $response['article'][$l]['ctg'] ?> <span class="fw-bold text-capitalize"><?= date("d M Y", strtotime($response['article'][$l]['cat'])) ?></span></p>
                             </div>
                             <div class="col col-3 d-flex">
-                                <a href="<?= $this->baseUrl ?>?artid/<?= $response['article'][$l]['id'] ?>" class="my-auto ms-auto btn btn-detail rounded-circle">
+                                <a href="<?= $this->baseUrl ?>?artid/<?= $response['profile']['cod'] ?>-<?= $response['article'][$l]['id'] ?>" class="my-auto ms-auto btn btn-detail rounded-circle">
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>

@@ -95,9 +95,14 @@
      </script>
 
      <script>
+          var code = "<?= isset($response['profile']['cod']) ? $response['profile']['cod'] : 'undefined'; ?>";
+
           $(document).ready(function() {
                $('.download_cv').click(function() {
-                    var file = 'assets/file/1AAxxxxxxxx_CV.pdf';
+                    if (code == 'undefined') {
+                         alert('no CV uploaded');
+                    }
+                    var file = 'assets/file/' + code + '_CV.pdf';
                     window.open(file, '_blank');
                });
           });
@@ -126,7 +131,7 @@
                               var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
                               var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
                               var $col2 = $('<div class="col col-3 d-flex">');
-                              var $link = $('<a href="' + baseUrl + '?porid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
+                              var $link = $('<a href="' + baseUrl + '?porid/' + item.cod + '-' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
 
                               $col1.append($title);
                               $col1.append($category);
@@ -187,7 +192,7 @@
                               var $title = $('<h4 class="card-title ff-inter text-capitalize">' + (item.ttl.length > 20 ? item.ttl.slice(0, 20) + '...' : item.ttl) + '</h4>');
                               var $category = $('<p class="card-text ff-inter text-uppercase">' + item.ctg + ' <span class="fw-bold text-capitalize">' + formatDate(item.cat) + '</span></p>');
                               var $col2 = $('<div class="col col-3 d-flex">');
-                              var $link = $('<a href="' + baseUrl + '?artid/' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
+                              var $link = $('<a href="' + baseUrl + '?artid/' + item.cod + '-' + item.id + '" class="my-auto ms-auto btn btn-detail rounded-circle"><i class="fas fa-arrow-right"></i></a>');
 
                               $col1.append($title);
                               $col1.append($category);
