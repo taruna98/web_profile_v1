@@ -102,8 +102,12 @@
                     if (code == 'undefined') {
                          alert('no CV uploaded');
                     }
-                    var file = 'assets/file/' + code + '_CV.pdf';
-                    window.open(file, '_blank');
+                    var rand = Math.floor(Math.random() * 100).toString(36);
+                    var file = 'assets/file/' + code + '_CV.pdf?' + rand;
+                    var new_tab = window.open(file, '_blank');
+                    // if (!new_tab || new_tab.closed || typeof new_tab.closed == 'undefined') {
+                    //      console.log('error');
+                    // }
                });
           });
      </script>
