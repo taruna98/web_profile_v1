@@ -96,19 +96,19 @@
 
      <script>
           var code = "<?= isset($response['profile']['cod']) ? $response['profile']['cod'] : 'undefined'; ?>";
+          var status_cv = "<?= isset($response['profile']['scv']) ? $response['profile']['scv'] : 'undefined'; ?>";
 
           $(document).ready(function() {
-               $('.download_cv').click(function() {
-                    if (code == 'undefined') {
-                         alert('no CV uploaded');
-                    }
-                    var rand = Math.floor(Math.random() * 100).toString(36);
-                    var file = 'assets/file/' + code + '_CV.pdf?' + rand;
-                    var new_tab = window.open(file, '_blank');
-                    // if (!new_tab || new_tab.closed || typeof new_tab.closed == 'undefined') {
-                    //      console.log('error');
-                    // }
-               });
+               $('.download_cv').removeClass('d-none');
+               if (status_cv == '1') {
+                    $('.download_cv').click(function() {
+                         var rand = Math.floor(Math.random() * 100).toString(36);
+                         var file = 'assets/file/' + code + '_CV.pdf?' + rand;
+                         var new_tab = window.open(file, '_blank');
+                    });
+               } else {
+                    $('.download_cv').addClass('d-none');
+               }
           });
      </script>
 
