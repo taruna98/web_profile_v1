@@ -5,10 +5,10 @@ function checkImageExists($path)
     return file_exists($path) ? $path : null;
 }
 
-$bg_home        = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-home.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-home.jpg';
-$img_profile    = checkImageExists('assets/img/' . $response['profile']['cod'] . '-img-profile.jpg') ?: 'assets/img/1AAxxxxxxxx-img-profile.jpg';
-$bg_service     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-service.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-service.jpg';
-$bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-article.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-article.jpg';
+$bg_home        = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-home.jpg') ?: 'assets/img/default-bg-home.jpg';
+$img_profile    = checkImageExists('assets/img/' . $response['profile']['cod'] . '-img-profile.jpg') ?: 'assets/img/default-img-profile.jpg';
+$bg_service     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-service.jpg') ?: 'assets/img/default-bg-service.jpg';
+$bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-article.jpg') ?: 'assets/img/default-bg-article.jpg';
 ?>
 
 <!-- Masthead -->
