@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" type="text/css">
 
+    <!-- jQuery 3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="assets/css/styles.css" rel="stylesheet" />
 

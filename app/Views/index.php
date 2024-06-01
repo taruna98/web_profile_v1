@@ -1,6 +1,18 @@
 <?php require('template/layout_top.php') ?>
+<?php
+function checkImageExists($path)
+{
+    return file_exists($path) ? $path : null;
+}
+
+$bg_home        = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-home.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-home.jpg';
+$img_profile    = checkImageExists('assets/img/' . $response['profile']['cod'] . '-img-profile.jpg') ?: 'assets/img/1AAxxxxxxxx-img-profile.jpg';
+$bg_service     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-service.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-service.jpg';
+$bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-article.jpg') ?: 'assets/img/1AAxxxxxxxx-bg-article.jpg';
+?>
+
 <!-- Masthead -->
-<header class="masthead" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-home.jpg?v=<?= rand(10, 100) ?>')">
+<header class="masthead">
     <div class="container">
         <div class="masthead-heading ff-pacifico text-capitalize">hello iam <?= $response['profile']['nme'] ?></div>
         <div class="masthead-subheading title-type ff-inter" id="title-type">-</div>
@@ -14,7 +26,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col col-12 col-md-12 col-lg-2 d-flex flex-column align-items-center justify-content-center">
-                        <img class="img-fluid rounded-circle border border-2" src="assets/img/<?= $response['profile']['cod'] ?>-img-profile.jpg?v=<?= rand(10, 100) ?>" alt="img-profile" style="border-color: #F66B0E !important">
+                        <img class="img-profile img-fluid rounded-circle border border-2" src="" alt="img-profile" style="border-color: #F66B0E !important">
                         <button type="button" class="download_cv btn btn-outline-light w-100 mt-4 mb-2 ff-inter"> <i class="fas fa-download"></i> &nbsp; Download CV</button>
                     </div>
                     <div class="col col-12 col-md-12 col-lg-10 d-flex align-items-center">
@@ -58,7 +70,7 @@
     </div>
 </section>
 <!-- Services -->
-<section class="page-section" id="services" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-service.jpg?v=<?= rand(10, 100) ?>')">
+<section class="page-section" id="services">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-white text-uppercase">SERVICE</h2>
@@ -110,14 +122,14 @@
                     </div>
                 </div>
             <?php } ?>
-            <div class="col-12 my-3 d-flex justify-content-center">
+            <div class="col-12 my-3 <?= (count($response['portfolio']) == 0) ? 'd-none' : 'd-flex' ?> justify-content-center">
                 <a href="<?= $this->baseUrl ?>?por/<?= $response['profile']['cod'] ?>" class="btn port-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE PORTFOLIO</span></a>
             </div>
         </div>
     </div>
 </section>
 <!-- Article -->
-<section class="page-section" id="article" style="background-image: url('assets/img/<?= $response['profile']['cod'] ?>-bg-article.jpg?v=<?= rand(10, 100) ?>')">
+<section class="page-section" id="article">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
@@ -143,10 +155,31 @@
                     </div>
                 </div>
             <?php } ?>
-            <div class="col-12 my-3 d-flex justify-content-center">
+            <div class="col-12 my-3 <?= (count($response['article']) == 0) ? 'd-none' : 'd-flex' ?> justify-content-center">
                 <a href="<?= $this->baseUrl ?>?art/<?= $response['profile']['cod'] ?>" class="btn artcl-btn-load text-decoration-none mt-3 ff-inter" style="height: 40px; width: 180px;" type="button"><span class="text-white m-auto">MORE ARTICLE</span></a>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function() {
+        function getRandInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var rand = '?v=' + getRandInt(10, 100);
+
+        var bg_home = '<?= $bg_home ?>' + rand;
+        var img_profile = '<?= $img_profile ?>' + rand;
+        var bg_service = '<?= $bg_service ?>' + rand;
+        var bg_article = '<?= $bg_article ?>' + rand;
+
+        $('.masthead').css('background-image', 'url(' + bg_home + ')');
+        $('.img-profile').attr('src', img_profile);
+        $('#services').css('background-image', 'url(' + bg_service + ')');
+        $('#article').css('background-image', 'url(' + bg_article + ')');
+    });
+</script>
 <?php require('template/layout_bottom.php') ?>
