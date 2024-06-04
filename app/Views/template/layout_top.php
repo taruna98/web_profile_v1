@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title><?= $_ENV['APP_NAME'] ?> - Home</title>
+    <title>Profile
+        <?php
+        if (strpos($this->page, 'proid') !== false) {
+            echo $response['profile']['nme'];
+        } elseif (strpos($this->page, 'porid') !== false) {
+            echo $response['nme'];
+        } elseif (strpos($this->page, 'artid') !== false) {
+            echo $response['nme'];
+        } else {
+            echo $response[0]['nme'];
+        }
+        ?>
+        - Home</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/img/icon-kretech.png" />
     <!-- Font Awesome icons (free version) -->

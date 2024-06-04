@@ -11,6 +11,14 @@ $bg_service     = checkImageExists('assets/img/' . $response['profile']['cod'] .
 $bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] . '-bg-article.jpg') ?: 'assets/img/default-bg-article.jpg';
 ?>
 
+<style>
+    /* all section */
+    .masthead,
+    .page-section {
+        min-height: 50vh;
+    }
+</style>
+
 <!-- Masthead -->
 <header class="masthead">
     <div class="container">
@@ -76,10 +84,10 @@ $bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] .
             <h2 class="section-heading ff-inter text-white text-uppercase">SERVICE</h2>
             <p class="ff-inter text-white text-uppercase fs-5"><?= $response['profile']['ssb'] ?></p>
         </div>
-        <div class="row text-center">
+        <div class="row justify-content-center">
             <?php for ($j = 0; $j < count(explode('|', $response['profile']['sci'])); $j++) { ?>
                 <div class="col-md-4 my-2">
-                    <div class="card">
+                    <div class="card text-center">
                         <span class="fa-stack fa-4x my-4 mx-auto">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="<?= explode('|', $response['profile']['sci'])[$j] ?> fa-stack-1x fa-inverse"></i>
@@ -131,8 +139,9 @@ $bg_article     = checkImageExists('assets/img/' . $response['profile']['cod'] .
 <!-- Article -->
 <section class="page-section" id="article">
     <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading ff-inter text-uppercase text-light">ARTICLE</h2>
+        <div class="text-center text-white">
+            <h2 class="section-heading ff-inter text-uppercase">ARTICLE</h2>
+            <p class="ff-inter text-uppercase fs-5 mb-4 <?= (count($response['article']) == 0) ? 'd-block' : 'd-none' ?>">LET'S FILL YOUR ARTICLE SECTION</p>
         </div>
         <div class="row">
             <?php $count_artcl = count($response['article']) < 3 ? count($response['article']) : 3; ?>
